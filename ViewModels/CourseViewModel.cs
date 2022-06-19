@@ -10,6 +10,7 @@ namespace LabBigSchool.ViewModels
 {
     public class CourseViewModel
     {
+
         [Required]
         public string Place { get; set; }
         [Required]

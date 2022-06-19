@@ -6,7 +6,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Http;
-using System.Web.Mvc;
+using System.Web.Mvc ;
+using HttpPostAttribute = System.Web.Http.HttpPostAttribute;
 
 namespace LabBigSchool.Controllers
 {
@@ -17,7 +18,7 @@ namespace LabBigSchool.Controllers
     {
         _dbContext = new ApplicationDbContext();
     }
-    [System.Web.Http.HttpPost]
+        [HttpPost]
     public IHttpActionResult Attend(FollowingDto followingDto)
     {
         var userID = User.Identity.GetUserId();
