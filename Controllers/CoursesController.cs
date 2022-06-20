@@ -58,8 +58,8 @@ namespace LabBigSchool.Controllers
             var courses = _dbContext.Attendances
                 .Where(a => a.AttendeeID == userId)
                 .Select(a => a.Course)
-                .Include(l = l.Lecturer)
-                .Include(l = l.Category)
+                .Include(l => l.Lecturer)
+                .Include(l => l.Category)
                 .ToList();
             var viewModel = new CoursesViewModel
             {

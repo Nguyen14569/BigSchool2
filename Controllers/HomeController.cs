@@ -27,7 +27,7 @@ namespace LabBigSchool.Controllers
                 UpcommingCourses = upcommingCourses,
                 ShowAction = User.Identity.IsAuthenticated
             };
-            return View(upcommingCourses);
+            return View(viewModel);
         }
         public ActionResult About()
         {

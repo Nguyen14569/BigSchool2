@@ -28,7 +28,6 @@ namespace LabBigSchool.Models
                 .HasRequired(a => a.Course)
                 .WithMany()
                 .WillCascadeOnDelete(false);
-            base.OnModelCreating(modelBuilder);
 
             modelBuilder.Entity<ApplicationUser>()
                 .HasMany(u => u.Followers)
@@ -40,6 +39,7 @@ namespace LabBigSchool.Models
                 .WithRequired(f => f.Follower)
                 .WillCascadeOnDelete(false);
 
+            base.OnModelCreating(modelBuilder);
         }
     }
 }   
